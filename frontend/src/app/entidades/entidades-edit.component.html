@@ -1,0 +1,45 @@
+
+<!-- Conteúdo da página -->
+<article>
+  <div>
+    <div class="card">
+      <div class="card-header">
+          <strong>{{action}} Entidades</strong>
+      </div>
+      <div class="card-body">
+
+      <div class="panel-body" style="min-height: 300px;">
+
+      <form class="col-xs-6" role="form" #entidadesForm="ngForm" (ngSubmit)="save(entidades)">
+        <fieldset [disabled]="isLoading">
+          <div class="form-group">
+            <label for="entidades-id" class="control-label">id</label>
+            <input type="" name="id" id="entidades-id" class="form-control" [(ngModel)]="entidades.id" readonly="true">
+          </div>
+          <div class="form-group">
+            <label for="entidades-description" class="control-label">description</label>
+            <input type="" name="description" id="entidades-description" class="form-control" [(ngModel)]="entidades.description" >
+          </div>
+        </fieldset>
+        <div class="card-footer clearfix">
+          <fieldset [disabled]="isLoading" class="pull-right">
+            <button type="button" class="btn btn-link text-danger mr-1" (click)="remove()" *ngIf="entidades.id">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+              <span>Remover</span>
+            </button>
+            <button type="button" class="btn btn-default mr-1" (click)="goBack()">
+              <i class="fa fa-times" aria-hidden="true"></i>
+              <span>Cancelar</span>
+            </button>
+            <button type="submit" class="btn btn-primary" [disabled]="entidadesForm.invalid">
+              <i class="fa fa-check" aria-hidden="true"></i>
+              <span>Salvar</span>
+            </button>
+          </fieldset>
+        </div>
+      </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</article>
