@@ -5,8 +5,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8080/app/api/',
-  socketUrl: 'ws://localhost:8080/app/push/meu-canal',
+  apiUrl: 'https://lucianojs-handson.estaleiro.serpro/app/api/',
+  socketUrl: 'wss://lucianojs-handson.estaleiro.serpro/app/push/meu-canal',
   googleId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   facebookId: 'xxxxxxxxxxxxxxxxxxxxxxxx'
 };
