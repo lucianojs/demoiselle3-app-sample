@@ -8,6 +8,25 @@
                 <password>sa</password>
             </security>
         </datasource>
+        <datasource jndi-name="java:jboss/datasources/AppDS" pool-name="AppDS" enabled="true" use-ccm="false">
+            <connection-url>jdbc:postgresql://10.79.62.127:5432/postgres</connection-url>
+            <driver>postgresql</driver>
+            <pool>
+                <min-pool-size>1</min-pool-size>
+                <max-pool-size>3</max-pool-size>
+                <prefill>true</prefill>
+            </pool>
+            <security>
+                <user-name>postgres</user-name>
+                <password>cXeerQypkv6pm97gMQpnYDGWpz7aweHfUQX8</password>
+            </security>
+            <statement>
+                <track-statements>true</track-statements>
+            </statement>
+        </datasource>
+        <driver name="postgresql" module="org.postgresql">
+            <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
+        </driver>
         <drivers>
             <driver name="h2" module="com.h2database.h2">
                 <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>

@@ -1,0 +1,24 @@
+## Driver PostgreSQL
+/subsystem=datasources/\
+  jdbc-driver=postgresql/:add(\
+    driver-name=postgresql,\
+    driver-module-name=org.postgresql,\
+    driver-xa-datasource-class-name=org.postgresql.xa.PGXADataSource)
+
+## Datasource
+/subsystem=datasources/\
+  data-source=AppDS/:add(\
+    jndi-name=java:jboss/datasources/AppDS,\
+    enabled=true,\
+    use-ccm=false,\
+    driver-name=postgresql,\
+    connection-url=jdbc:postgresql://10.79.62.127:5432/postgres,\
+    min-pool-size=1,\
+    max-pool-size=5,\
+    pool-prefill=true,\
+    user-name=postgres,\
+    password=cXeerQypkv6pm97gMQpnYDGWpz7aweHfUQX8,\
+    track-statements=true,\
+    valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker,\
+    background-validation=true,\
+    exception-sorter-class-name=org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter)
