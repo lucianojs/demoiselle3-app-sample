@@ -1,0 +1,15 @@
+{
+    "/app": {
+        "target": {
+            "host": "lucianojs-handson.estaleiro.serpro",
+            "protocol": "https:",
+            "port": 443
+        },
+        "pathRewrite": {
+            "/app/^": ""
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "info"
+    }
+}

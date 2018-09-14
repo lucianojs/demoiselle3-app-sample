@@ -12,12 +12,12 @@
     enabled=true,\
     use-ccm=false,\
     driver-name=postgresql,\
-    connection-url=jdbc:postgresql://10.79.62.127:5432/postgres,\
+    connection-url=${env.HANDS_DB_URL},\
     min-pool-size=1,\
     max-pool-size=5,\
     pool-prefill=true,\
-    user-name=postgres,\
-    password=cXeerQypkv6pm97gMQpnYDGWpz7aweHfUQX8,\
+    user-name=${env.HANDS_DB_USR},\
+    password=${env.HANDS_DB_PWD},\
     track-statements=true,\
     valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker,\
     background-validation=true,\

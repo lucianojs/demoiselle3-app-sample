@@ -2445,7 +2445,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
     production: false,
-    apiUrl: 'https://lucianojs-handson.estaleiro.serpro/app/api/',
+    apiUrl: '/app/api/',
     socketUrl: 'wss://lucianojs-handson.estaleiro.serpro/app/push/meu-canal',
     googleId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     facebookId: 'xxxxxxxxxxxxxxxxxxxxxxxx'
